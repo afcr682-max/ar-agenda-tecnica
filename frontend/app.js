@@ -1,4 +1,4 @@
-// Troque pela URL pública real da API na Railway, sem barra final.
+//https://ar-agenda-tecnica.up.railway.app
 const API_BASE='https://SUA-API.up.railway.app';
 const $=id=>document.getElementById(id);let token=sessionStorage.getItem('ar_agenda_token')||'',email='',clients=[],appointments=[];
 const today=()=>{let d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const datefmt=d=>d?new Date(d+'T12:00:00').toLocaleDateString('pt-BR'):'—';const money=v=>Number(v||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
